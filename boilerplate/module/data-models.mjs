@@ -131,10 +131,7 @@ const {
 
   class FeatData extends BoilerplateDataModel {
 	static defineSchema() {
-		    const schema = super.defineSchema();
-			schema.description = new HTMLField();
-
-			return schema;
+			description = new HTMLField()
 	}
   }
 
