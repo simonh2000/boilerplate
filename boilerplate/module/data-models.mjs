@@ -131,7 +131,9 @@ const {
 
   class FeatData extends BoilerplateDataModel {
 	static defineSchema() {
-			description = new HTMLField()
+		return {
+			description: new HTMLField()
+		}
 	}
   }
 
