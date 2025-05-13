@@ -70,119 +70,127 @@ const {
 
   export class EquippableData extends ItemData {
 	static defineSchema() {
-		return {
-			isEquipped: new BooleanField({ required: true, initial: false }),
-			durability: new SchemaField({
+		const schema = super.defineSchema();
+			schema.isEquipped = new BooleanField({ required: true, initial: false });
+			schema.durability = new SchemaField({
 				value: new NumberField({ required: true, integer: true, initial: 10 }),
 				min: new NumberField({ required: true, integer: true, initial: 0 }),
 				max: new NumberField({ required: true, integer: true, initial: 10 })
-			}),
-			lightPreset: new NumberField({ required: true, integer: true, initial: 0 }),
-			addedDef: new NumberField({ required: true, integer: true, initial: 0 })
-		}
+			});
+			schema.lightPreset = new NumberField({ required: true, integer: true, initial: 0 });
+			schema.addedDef = new NumberField({ required: true, integer: true, initial: 0 });
+
+			return schema;
 	}
   }
 
   export class WeaponData extends EquippableData {
 	static defineSchema() {
-		return {
+		const schema = super.defineSchema();
 			/* turn into list of options */
-			skillCategory: new StringField({ required: true, initial: "strength" }),
-			handedness: new SchemaField({
+			schema.skillCategory = new StringField({ required: true, initial: "strength" });
+			schema.handedness = new SchemaField({
 				value: new NumberField({ required: true, integer: true, initial: 1 }),
 				min: new NumberField({ required: true, integer: true, initial: 0 })
-			}),
-			range: new SchemaField({
+			});
+			schema.range = new SchemaField({
 				value: new NumberField({ required: true, integer: true, initial: 1 }),
 				min: new NumberField({ required: true, integer: true, initial: 1 })
-			}),
+			});
 			/* turn into list of options */
-			rangeType: new StringField({ required: true, initial: "short" }),
+			schema.rangeType = new StringField({ required: true, initial: "short" });
 			/* turn into list of options */
-			damageType: new StringField({ required: true, initial: "blunt" }),
-			damage: new SchemaField({
+			schema.damageType = new StringField({ required: true, initial: "blunt" });
+			schema.damage = new SchemaField({
 				value: new NumberField({ required: true, integer: true, initial: 5 }),
 				min: new NumberField({ required: true, integer: true, initial: 1 })
-			}),
-			isWeapon: new BooleanField({ required: true, initial: true }),
-			isShield: new BooleanField({ required: true, initial: false })
-		}
+			});
+			schema.isWeapon = new BooleanField({ required: true, initial: true });
+			schema.isShield = new BooleanField({ required: true, initial: false });
+
+			return schema;
 	}
   }
 
   export class WearableData extends EquippableData {
 	static defineSchema() {
-		return {
+		const schema = super.defineSchema();
 			/* turn into list of options */
-			wearableSlot: new StringField({ required: true, initial: "top" })
-		}
+			schema.wearableSlot = new StringField({ required: true, initial: "top" });
+
+			return schema;
 	}
   }
 
   export class StuffData extends ItemData {
 	static defineSchema() {
-		return {
-		}
+		const schema = super.defineSchema();
+		return schema;
 	}
   }
 
   class FeatData extends BoilerplateDataModel {
 	static defineSchema() {
-		return {
-			description: new HTMLField()
-		}
+		    const schema = super.defineSchema();
+			schema.description = new HTMLField();
+
+			return schema;
 	}
   }
 
   export class SkillData extends FeatData {
 	static defineSchema() {
-		return {
+		const schema = super.defineSchema();
 			/* turn into list of options */
-			skillCategory: new StringField({ required: true, initial: "strength" }),
-			diceBonus: new NumberField({ required: true, integer: true, initial: 1 })
-		}
+			schema.skillCategory = new StringField({ required: true, initial: "strength" });
+			schema.diceBonus = new NumberField({ required: true, integer: true, initial: 1 });
+
+			return schema;
 	}
   }
 
   export class TechniqueData extends FeatData {
 	static defineSchema() {
-		return {
-			staminaCost: new SchemaField({
+		const schema = super.defineSchema();
+			schema.staminaCost = new SchemaField({
 				value: new NumberField({ required: true, integer: true, initial: 1 }),
 				min: new NumberField({ required: true, integer: true, initial: 1 })
-			}),
-			isSpell: new BooleanField({ required: true, initial: false })
-		}
+			});
+			schema.isSpell = new BooleanField({ required: true, initial: false });
+			
+			return schema;
 	}
   }
 
   export class TraitData extends FeatData {
 	static defineSchema() {
-		return {
+		const schema = super.defineSchema();
 			/* turn into list of options */
-			traitType: new StringField({ required: true, initial: "positive" })
-		}
+			schema.traitType = new StringField({ required: true, initial: "positive" });
+
+			return schema;
 	}
   }
 
   export class WeaknessData extends FeatData {
 	static defineSchema() {
-		return {
+		const schema = super.defineSchema();
 			/* turn into list of options */
-			weaknessType: new StringField({ required: true, initial: "" })
-		}
+			schema.weaknessType = new StringField({ required: true, initial: "positional" });
+			return schema;
 	}
   }
 
   export class StatusData extends FeatData {
 	static defineSchema() {
-		return {
-			isTurnBased: new BooleanField({ required: true, initial: true }),
-			turnCount: new SchemaField({
+		const schema = super.defineSchema();
+			schema.isTurnBased = new BooleanField({ required: true, initial: true });
+			schema.turnCount = new SchemaField({
 				value: new NumberField({ required: true, integer: true, initial: 1 }),
 				min: new NumberField({ required: true, integer: true, initial: 0 })
-			}),
-		}
+			});
+
+			return schema;
 	}
   }
 
