@@ -1,0 +1,49 @@
+<header class='sheet-header'>
+  <div class='headContainer'>
+    <div class='pfpContainer'>
+      <img
+        class='profile-img'
+        src='{{item.img}}'
+        data-edit='img'
+        data-action='onEditImage'
+        title='{{item.name}}'
+        height='100'
+        width='100'
+      />
+    </div>
+    <div class='statsContainer'>
+      <input
+        name='name'
+        type='text'
+        value='{{item.name}}'
+        placeholder='Name'
+        class='itemNameInputField'
+      />
+      <div class='statsResources'>
+        <div class='statsResourcesSub'>
+          <label for='system.skillCategory' class='resource-label'>
+          {{localize 'Skill Category: '}}
+          </label>
+          <input
+          type='text'
+          name='system.skillCategory'
+          value='{{system.skillCategory}}'
+          class='statInputField'
+          />
+        </div>
+        <div class='statsResourcesSub'>
+          <label for='system.diceBonus' class='resource-label'>
+          {{localize 'Dice Bonus: '}}
+          </label>
+          <input
+          type='number'
+          name='system.diceBonus'
+          value='{{system.diceBonus}}'
+          class='statInputField'
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
