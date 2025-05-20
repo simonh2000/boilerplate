@@ -1,0 +1,240 @@
+<section class="inventory tab {{tabs.inventory.cssClass}}" data-group="primary" data-tab="inventory">
+  <!--<section class='inventory tab {{tab.cssClass}}' data-group='primary' data-tab='inventory'>-->
+
+  {{log tab}}
+
+  <div class="inventorySection">
+
+    <div class="inventoryEquippedContainerContainer">
+      <div class="inventoryEquippedTitle">
+        <span>Equipped Weapons</span>
+      </div>
+      <div class="inventoryEquippedContainer">
+          <ol class='items-list'>
+            <li class='item flexrow items-header'>
+              <div class='inventoryShortTitleOffsetlessImage'>{{localize 'Item'}}</div>
+              <div class='inventoryShortTitleOffsetless'>{{localize 'Name'}}</div>
+              <div class='inventoryShortTitleOffsetless'>{{localize 'Damage'}}</div>
+              <div class='inventoryShortTitleOffsetless'>{{localize 'Durab.'}}</div>
+              <div class='inventoryShortTitleOffsetless'>{{localize 'Hands'}}</div>
+            </li>
+            {{#each equippedWeapons as |item id|}}
+              <li
+                class='item flexrow'
+                data-item-id='{{item._id}}'
+                data-drag='true'
+                data-document-class='Item'
+              >
+                <div class='inventoryShortTitleOffsetlessImage'>
+                  <div class="draggable" data-item-id="{{item.id}}">
+                  <div class='item-image'>
+                    <a
+                    class='item-control item-edit'
+                    title='{{localize "DOCUMENT.Update" type='stuff'}}'
+                    data-action='viewDoc'
+                    >
+                      <img
+                        src='{{item.img}}'
+                        title='{{item.name}}'
+                        width='24'
+                        height='24'
+                      />
+                    </a>
+                  </div>
+                  </div>
+                </div>
+                <div class="inventoryShortTitleOffsetless">{{item.name}}</div>
+                <div class='inventoryShortTitleOffsetless'>{{item.system.damage.value}}, {{item.system.damageType}}</div>
+                <div class='inventoryShortTitleOffsetless'>{{item.system.durability.value}} / {{item.system.durability.max}}</div>
+                <div class='inventoryShortTitleOffsetless'>{{item.system.handedness.value}}-handed</div>
+              </li>
+            {{/each}}
+          </ol>
+      </div>
+    </div>
+
+    <div class="inventoryEquippedContainerContainer">
+      <div class="inventoryEquippedTitle">
+        <span>Equipped Clothing</span>
+      </div>
+      <div class="inventoryEquippedContainer">
+          <ol class='items-list'>
+            <li class='item flexrow items-header'>
+              <div class='inventoryShortTitleOffsetlessImage'>{{localize 'Item'}}</div>
+              <div class='inventoryShortTitleOffsetlessWearableName'>{{localize 'Name'}}</div>
+              <div class='inventoryShortTitleOffsetless'>{{localize 'Durab.'}}</div>
+              <div class='inventoryShortTitleOffsetless'>{{localize 'Slot'}}</div>
+            </li>
+            {{#each equippedWearables as |item id|}}
+              <li
+                class='item flexrow'
+                data-item-id='{{item._id}}'
+                data-drag='true'
+                data-document-class='Item'
+              >
+                <div class='inventoryShortTitleOffsetlessImage'>
+                  <div class="draggable" data-item-id="{{item.id}}">
+                  <div class='item-image'>
+                    <a
+                    class='item-control item-edit'
+                    title='{{localize "DOCUMENT.Update" type='wearable'}}'
+                    data-action='viewDoc'
+                    >
+                      <img
+                        src='{{item.img}}'
+                        title='{{item.name}}'
+                        width='24'
+                        height='24'
+                      />
+                    </a>
+                  </div>
+                  </div>
+                </div>
+                <div class="inventoryShortTitleOffsetlessWearableName">{{item.name}}</div>
+                <div class='inventoryShortTitleOffsetless'>{{item.system.durability.value}} / {{item.system.durability.max}}</div>
+                <div class='inventoryShortTitleOffsetless'>{{item.system.wearableSlot}}</div>
+              </li>
+            {{/each}}
+          </ol>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="inventorySection">
+
+    <div class="inventoryItemContainerContainer">
+      <div class="inventoryEquippedTitle">
+        <span>Weapons</span>
+      </div>
+      <div class="inventoryEquippedContainer">
+          <ol class='items-list'>
+            <li class='item flexrow items-header'>
+              <div class='inventoryShortTitleOffsetlessImage'>{{localize 'Item'}}</div>
+              <div class='inventoryShortTitleOffsetless'>{{localize 'Name'}}</div>
+              <div class='inventoryShortTitleOffsetless'>{{localize 'Damage'}}</div>
+            </li>
+            {{#each weapons as |item id|}}
+              <li
+                class='item flexrow'
+                data-item-id='{{item._id}}'
+                data-drag='true'
+                data-document-class='Item'
+              >
+                <div class='inventoryShortTitleOffsetlessImage'>
+                  <div class="draggable" data-item-id="{{item.id}}">
+                  <div class='item-image'>
+                    <a
+                    class='item-control item-edit'
+                    title='{{localize "DOCUMENT.Update" type='stuff'}}'
+                    data-action='viewDoc'
+                    >
+                      <img
+                        src='{{item.img}}'
+                        title='{{item.name}}'
+                        width='24'
+                        height='24'
+                      />
+                    </a>
+                  </div>
+                  </div>
+                </div>
+                <div class="inventoryShortTitleOffsetless">{{item.name}}</div>
+                <div class='inventoryShortTitleOffsetless'>{{item.system.damage.value}}, {{item.system.damageType}}</div>
+              </li>
+            {{/each}}
+          </ol>
+      </div>
+    </div>
+
+    <div class="inventoryItemContainerContainer">
+      <div class="inventoryEquippedTitle">
+        <span>Clothing</span>
+      </div>
+      <div class="inventoryEquippedContainer">
+          <ol class='items-list'>
+            <li class='item flexrow items-header'>
+              <div class='inventoryShortTitleOffsetlessImage'>{{localize 'Item'}}</div>
+              <div class='inventoryShortTitleOffsetless'>{{localize 'Name'}}</div>
+              <div class='inventoryShortTitleOffsetless'>{{localize 'Slot'}}</div>
+            </li>
+            {{#each wearables as |item id|}}
+              <li
+                class='item flexrow'
+                data-item-id='{{item._id}}'
+                data-drag='true'
+                data-document-class='Item'
+              >
+                <div class='inventoryShortTitleOffsetlessImage'>
+                  <div class="draggable" data-item-id="{{item.id}}">
+                  <div class='item-image'>
+                    <a
+                    class='item-control item-edit'
+                    title='{{localize "DOCUMENT.Update" type='wearable'}}'
+                    data-action='viewDoc'
+                    >
+                      <img
+                        src='{{item.img}}'
+                        title='{{item.name}}'
+                        width='24'
+                        height='24'
+                      />
+                    </a>
+                  </div>
+                  </div>
+                </div>
+                <div class="inventoryShortTitleOffsetless">{{item.name}}</div>
+                <div class='inventoryShortTitleOffsetless'>{{item.system.wearableSlot}}</div>
+              </li>
+            {{/each}}
+          </ol>
+      </div>
+    </div>
+
+    <div class="inventoryItemContainerContainer">
+      <div class="inventoryEquippedTitle">
+        <span>Items</span>
+      </div>
+      <div class="inventoryEquippedContainer">
+          <ol class='items-list'>
+            <li class='item flexrow items-header'>
+              <div class='inventoryShortTitleOffsetlessImage'>{{localize 'Item'}}</div>
+              <div class='inventoryShortTitleOffsetless'>{{localize 'Name'}}</div>
+              <div class='inventoryShortTitleOffsetless'>{{localize 'Quant.'}}</div>
+            </li>
+            {{#each stuffs as |item id|}}
+              <li
+                class='item flexrow'
+                data-item-id='{{item._id}}'
+                data-drag='true'
+                data-document-class='Item'
+              >
+                <div class='inventoryShortTitleOffsetlessImage'>
+                  <div class="draggable" data-item-id="{{item.id}}">
+                  <div class='item-image'>
+                    <a
+                    class='item-control item-edit'
+                    title='{{localize "DOCUMENT.Update" type='stuff'}}'
+                    data-action='viewDoc'
+                    >
+                      <img
+                        src='{{item.img}}'
+                        title='{{item.name}}'
+                        width='24'
+                        height='24'
+                      />
+                    </a>
+                  </div>
+                  </div>
+                </div>
+                <div class="inventoryShortTitleOffsetless">{{item.name}}</div>
+                <div class='inventoryShortTitleOffsetless'>{{item.system.quantity.value}}</div>
+              </li>
+            {{/each}}
+          </ol>
+      </div>
+    </div>
+
+  </div>
+  
+</section>

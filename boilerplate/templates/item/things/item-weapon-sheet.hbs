@@ -1,0 +1,186 @@
+<div class='weaponItemHeader'>
+    <div class='weaponPfpContainer'>
+      <img
+        class='betterProfile-img'
+        src='{{item.img}}'
+        data-edit='img'
+        data-action='onEditImage'
+        title='{{item.name}}'
+        height='80'
+        width='80'
+      />
+    </div>
+    <div class='statsContainer'>
+      <input
+        name='name'
+        type='text'
+        value='{{item.name}}'
+        placeholder='Name'
+        class='wearableNameInputField'
+      />
+
+      <div class='statsResources'>
+		<span class="statsResourcesSub">
+		  <select name="system.isEquipped" class="selectField">
+            {{selectOptions choicesEquipWeapon selected=valueEquipWeapon localize=true}}
+          </select>
+		</span>
+        <span class='statsResourcesSub'>
+		<label>Category: </label>
+          <select name="system.skillCategory" class="selectField">
+            {{selectOptions choicesWeapon selected=valueWeapon localize=true}}
+          </select>
+        </span>
+		{{#if hasDef}}
+		<span class='statsResourcesSub'>
+          <label>DEF: </label>
+          <input
+          type='number'
+          name='system.addedDef'
+          value='{{system.addedDef}}'
+          class='statInputFieldSmall'
+          />
+        </span>
+		{{else}}
+		{{#if isUserGM}}
+		<span class='statsResourcesSub'>
+          <label>DEF: </label>
+          <input
+          type='number'
+          name='system.addedDef'
+          value='{{system.addedDef}}'
+          class='statInputFieldSmall'
+          />
+        </span>
+		{{/if}}{{/if}}
+	  </div>
+
+	  <div class="statsResources">
+		<span class='statsResourcesSub'>
+		  <label>Durability: </label>
+          <input
+          type='number'
+          name='system.durability.value'
+          value='{{system.durability.value}}'
+		  min="{{system.durability.min}}"
+          class='statInputField'
+          />
+        </span>
+		<label> / </label>
+		<span class="statsResourcesSub">
+          <input
+          type='number'
+          name='system.durability.max'
+          value='{{system.durability.max}}'
+          class='statInputField'
+          />
+        </span>
+		<span class='statsResourcesSub'>
+          <label>Quantity: </label>
+          <input
+          type='number'
+          name='system.quantity.value'
+          value='{{system.quantity.value}}'
+		  min="{{system.quantity.min}}"
+          class='statInputField'
+          />
+        </span>
+	  </div>
+
+	  <div class="statsResources">
+		<span class="weaponDetailDesc">
+			{{#if isAWeapon}}Deals {{system.damage.value}} {{system.damageType}} damage to any target within {{system.range.value}} tiles.<br>
+			{{system.handedness.value}}-handed. {{/if}}{{#if isAShield}}Shield.{{/if}}
+		</span>
+	  </div>
+
+{{#if isUserGM}}
+	  <div class="statsResources">
+        <label>Damage: </label>
+        <span class='statsResourcesSub'>
+          <input
+          type='number'
+          name='system.damage.value'
+          value='{{system.damage.value}}'
+		  min="{{system.damage.min}}"
+          class='statInputField'
+          />
+        </span>
+		<label>Type: </label>
+        <span class='statsResourcesSub'>
+          <select name="system.damageType" class="selectField">
+            {{selectOptions choicesDTypeWeapon selected=valueDTypeWeapon localize=true}}
+          </select>
+        </span>
+		<label>Range: </label>
+		<span class='statsResourcesSub'>
+          <input
+          type='number'
+          name='system.range.value'
+          value='{{system.range.value}}'
+          class='statInputField'
+          />
+        </span>
+      </div>
+
+	  <div class="statsResources">
+        <span class='statsResourcesSub'>
+		  <div class="form-group">
+  			<div class="form-fields">
+    		  {{radioBoxes groupNameWeaponIsShield choicesWeaponIsShield checked=chosenWeaponIsShield localize=true}}
+  			</div>
+		  </div>
+        </span>
+        <span class='statsResourcesSub'>
+		  <div class="form-group">
+  			<div class="form-fields">
+    			{{radioBoxes groupNameWeaponIsWeapon choicesWeaponIsWeapon checked=chosenWeaponIsWeapon localize=true}}
+  			</div>
+		  </div>
+        </span>
+		<label>Hands: </label>
+		<span class='statsResourcesSub'>
+          <input
+          type='number'
+          name='system.handedness.value'
+          value='{{system.handedness.value}}'
+          class='statInputField'
+          />
+        </span>
+      </div>
+
+	  <div class="statsResources">
+        <label>Default: </label>
+        <span class='statsResourcesSub'>
+          <input
+          type='number'
+          name='system.priceDefault.value'
+          value='{{system.priceDefault.value}}'
+		  min="{{system.priceDefault.min}}"
+          class='statInputField'
+          />
+        </span>
+		<label>Actual: </label>
+        <span class='statsResourcesSub'>
+          <input
+          type='number'
+          name='system.priceActual.value'
+          value='{{system.priceActual.value}}'
+		  min="{{system.priceActual.min}}"
+          class='statInputField'
+          />
+        </span>
+		<label>Light: </label>
+		<span class='statsResourcesSub'>
+          <input
+          type='number'
+          name='system.lightPreset'
+          value='{{system.lightPreset}}'
+          class='statInputField'
+          />
+        </span>
+      </div>
+	{{/if}}
+
+    </div>
+</header>

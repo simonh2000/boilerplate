@@ -1,0 +1,33 @@
+<header class='sheet-header'>
+  <div class='headContainer'>
+    <div class='pfpContainer'>
+      <img
+        class='profile-img'
+        src='{{item.img}}'
+        data-edit='img'
+        data-action='onEditImage'
+        title='{{item.name}}'
+        height='100'
+        width='100'
+      />
+    </div>
+    <div class='statsContainer'>
+      <input
+        name='name'
+        type='text'
+        value='{{item.name}}'
+        placeholder='Name'
+        class='itemNameInputField'
+      />
+      <div class='statsResourcesCentered'>
+		<label>Type: </label>
+        <div class='statsResourcesSub'>
+          <select name="system.traitType" class="selectField">
+            {{selectOptions choicesTrait selected=valueTrait localize=true}}
+          </select>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>

@@ -1,0 +1,61 @@
+<header class='sheet-header'>
+  <div class='headContainer'>
+    <div class='pfpContainer'>
+      <img
+        class='profile-img'
+        src='{{item.img}}'
+        data-edit='img'
+        data-action='onEditImage'
+        title='{{item.name}}'
+        height='100'
+        width='100'
+      />
+    </div>
+    <div class='statsContainer'>
+      <input
+        name='name'
+        type='text'
+        value='{{item.name}}'
+        placeholder='Name'
+        class='itemNameInputField'
+      />
+      <div class='statsResources'>
+        <div class='statsResourcesSub'>
+          <label for='system.quantity.value' class='resource-label'>
+          {{localize 'Quantity: '}}
+          </label>
+          <input
+          type='number'
+          name='system.quantity.value'
+          value='{{system.quantity.value}}'
+		  min="{{system.quantity.min}}"
+          class='statInputField'
+          />
+        </div>
+		{{#if isUserGM}}
+        <label>Default: </label>
+        <div class='statsResourcesSub'>
+          <input
+          type='number'
+          name='system.priceDefault.value'
+          value='{{system.priceDefault.value}}'
+		  min="{{system.priceDefault.min}}"
+          class='statInputField'
+          />
+        </div>
+		<label>Actual: </label>
+        <div class='statsResourcesSub'>
+          <input
+          type='number'
+          name='system.priceActual.value'
+          value='{{system.priceActual.value}}'
+		  min="{{system.priceActual.min}}"
+          class='statInputField'
+          />
+        </div>
+		{{/if}}
+      </div>
+
+    </div>
+  </div>
+</header>

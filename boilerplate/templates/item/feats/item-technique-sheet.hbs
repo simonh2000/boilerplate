@@ -1,0 +1,49 @@
+<header class='sheet-header'>
+  <div class='headContainer'>
+    <div class='pfpContainer'>
+      <img
+        class='profile-img'
+        src='{{item.img}}'
+        data-edit='img'
+        data-action='onEditImage'
+        title='{{item.name}}'
+        height='100'
+        width='100'
+      />
+    </div>
+    <div class='statsContainer'>
+      <input
+        name='name'
+        type='text'
+        value='{{item.name}}'
+        placeholder='Name'
+        class='itemNameInputField'
+      />
+      <div class='statsResources'>
+		<div class='statsResourcesSub'>
+			<label for='staminaCost' class='resource-label'>
+            {{localize 'Stamina Cost: '}}
+          	</label>
+      		<input
+        		name='staminaCost'
+        		type='text'
+        		value='{{system.staminaCost.value}}'
+            min='{{system.staminaCost.min}}'
+        		class='statInputField'
+      		/>
+        </div>
+        <div class='statsResourcesSub'>
+
+		<div class="form-group">
+  			<div class="form-fields">
+    			{{radioBoxes groupNameTechnique choicesTechnique checked=chosenTechnique localize=true}}
+  			</div>
+		</div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>

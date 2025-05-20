@@ -1,0 +1,119 @@
+{
+	"id": "boilerplate",
+	"title": "Boilerplate",
+	"description": "A",
+	"version": "0.1.0",
+	"compatibility": {
+	  "minimum": "13",
+	  "verified": "13"
+	},
+	"authors": [{
+	  "name": "name"
+	}],
+	"flags": {
+		"hotReload": {
+		  "extensions": ["css", "html", "hbs", "json"],
+		  "paths": ["css", "lang", "templates"]
+		}
+	  },	
+	"esmodules": ["module/boilerplate.mjs"],
+	"styles": ["css/boilerplate.css"],
+	"packs": [{
+	  "name": "monsters",
+	  "label": "Boilerplate Monsters",
+	  "type": "Actor"
+	},
+	{
+	  "name": "items",
+	  "label": "Boilerplate Items",
+	  "type": "Item"
+	}],
+	"documentTypes": {
+		"Actor": {
+			"person": {
+				"htmlFields": ["biography"],
+				"filePathFields": {
+					"crest": ["IMAGE"]
+				}
+			},
+			"monster": {
+				"htmlFields": ["biography"],
+				"filePathFields": {
+					"crest": ["IMAGE"]
+				}
+			},
+			"shop": {
+				"htmlFields": ["biography"],
+				"filePathFields": {
+					"crest": ["IMAGE"]
+				}
+			}
+		},	
+	  	"Item": {
+			"weapon": {
+				"htmlFields": ["biography"],
+				"filePathFields": {
+					"crest": ["IMAGE"]
+				}
+			},
+			"holdable":{
+				"htmlFields": ["biography"],
+				"filePathFields": {
+					"crest": ["IMAGE"]
+				}
+			},
+			"wearable":{
+				"htmlFields": ["biography"],
+				"filePathFields": {
+					"crest": ["IMAGE"]
+				}
+			},
+			"stuff":{
+				"htmlFields": ["biography"],
+				"filePathFields": {
+					"crest": ["IMAGE"]
+				}
+			},
+			"skill":{
+				"htmlFields": ["biography"],
+				"filePathFields": {
+					"crest": ["IMAGE"]
+				}
+			},
+			"technique":{
+				"htmlFields": ["biography"],
+				"filePathFields": {
+					"crest": ["IMAGE"]
+				}
+			},
+			"trait":{
+				"htmlFields": ["biography"],
+				"filePathFields": {
+					"crest": ["IMAGE"]
+				}
+			},
+			"weakness":{
+				"htmlFields": ["biography"],
+				"filePathFields": {
+					"crest": ["IMAGE"]
+				}
+			},
+			"status":{
+				"htmlFields": ["biography"],
+				"filePathFields": {
+					"crest": ["IMAGE"]
+				}
+			}
+	  	}
+	},
+	"socket": false,
+	"initiative": "1d20",
+	"grid": {
+	  "type": 1,
+	  "distance": 5,
+	  "units": "ft",
+	  "diagonals": 0
+	},
+	"primaryTokenAttribute": "resources.hp",
+	"secondaryTokenAttribute": "resources.stamina"
+  }

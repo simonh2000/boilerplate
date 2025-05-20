@@ -1,0 +1,158 @@
+<header class='personSheetHeader'>
+
+  <div class="personSheetVertSideSections">
+    <div class="personSheetHorizPartLarge">
+      <label>HP: </label>
+          <input
+          type='number'
+          name='system.resources.hp.value'
+          value='{{system.resources.hp.value}}'
+          max='{{system.resources.hp.max}}'
+          class='statInputFieldLarge'
+          />
+          <span> / </span>
+          <input
+          type='number'
+          name='system.resources.hp.max'
+          value='{{system.resources.hp.max}}'
+          class='statInputFieldLarge'
+          />
+    </div>
+    <div class="personSheetHorizPartLarge">
+      <label>Stamina: </label>
+          <input
+          type='number'
+          name='system.resources.stamina.value'
+          value='{{system.resources.stamina.value}}'
+          max='{{system.resources.stamina.max}}'
+          class='statInputFieldLarge'
+          />
+          <span> / </span>
+          <input
+          type='number'
+          name='system.resources.stamina.max'
+          value='{{system.resources.stamina.max}}'
+          class='statInputFieldLarge'
+          />
+    </div>
+    <div class="personDetailText">
+      {{#if isStaminaBelowQuarter}}
+      {{actor.name}} is feeling exhausted! <br>-2 subtractive dice on all rolls!
+      {{else}}
+      {{#if isStaminaBelowHalf}}
+      {{actor.name}} is feeling tired. <br>-1 subtractive dice on all rolls!
+      {{else}}
+      {{actor.name}} is feeling fine! <br>No subtractive dice.
+      {{/if}}{{/if}}
+    </div>
+    <div class="personSheetHorizPartSmall">
+      <span>
+      <label for='system.def' class='resource-label'>
+          {{localize 'DEF: '}}
+          </label>
+          <input
+          type='number'
+          name='system.def'
+          value='{{system.def}}'
+          class='statInputFieldSmall'
+          />
+      </span>
+      <span>
+      <label for='system.eva' class='resource-label'>
+          {{localize 'EVA: '}}
+          </label>
+          <input
+          type='number'
+          name='system.eva'
+          value='{{system.eva}}'
+          class='statInputFieldSmall'
+          />
+      </span>
+    </div>
+    <div class="personSheetHorizPartSmall">
+        <span>
+          <label for='system.spd.value' class='resource-label'>
+          {{localize 'SPD: '}}
+          </label>
+          <input
+          type='number'
+          name='system.spd.value'
+          value='{{system.spd.value}}'
+          class='statInputFieldSmall'
+          />
+        </span>
+        <span>
+          <label for='system.xp.value' class='resource-label'>
+          {{localize 'XP: '}}
+          </label>
+          <input
+          type='number'
+          name='system.xp.value'
+          value='{{system.xp.value}}'
+          class='statInputFieldSmall'
+          />
+        </span>
+    </div>
+  </div>
+
+  <div class="personSheetVertCenterSection">
+    <div class='personPfpContainer'>
+      <img
+        class='betterPersonProfile-img'
+        src='{{actor.img}}'
+        data-edit='img'
+        data-action='onEditImage'
+        title='{{actor.name}}'
+        height='100'
+        width='100'
+      />
+    </div>
+    <div class="personSheetNameContainer">
+        <input
+        name='name'
+        type='text'
+        value='{{actor.name}}'
+        placeholder='Name'
+        class='personNameInputField'
+      />
+    </div>
+  </div>
+
+  <div class="personSheetVertSideSections">
+    <div class="personSheetHorizPartLarge">
+
+    </div>
+    <div class="personSheetHorizPartHalf">
+
+    </div>
+    <div class="personSheetHorizPartHalf">
+
+    </div>
+    <div class="personSheetHorizPart">
+
+    </div>
+    <div class="personSheetHorizPart">
+      <span>
+      <span>
+      <label>Miasma: </label>
+          <input
+          type='number'
+          name='system.miasma.value'
+          value='{{system.miasma.value}}'
+          class='statInputField'
+          />
+      </span>
+      <span>
+      <label> / </label>
+          <input
+          type='number'
+          name='system.miasma.max'
+          value='{{system.miasma.max}}'
+          class='statInputField'
+          />
+      </span>
+      </span>
+    </div>
+  </div>
+
+</header>

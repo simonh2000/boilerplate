@@ -1,0 +1,1109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+:root {
+  --boilerplate-c-dark: #191813;
+  --boilerplate-c-faint: #c9c7b8;
+  --boilerplate-c-beige: #b5b3a4;
+  --boilerplate-c-tan: #444444;
+  --boilerplate-c-white: #ffffff;
+  --boilerplate-c-black: #000000;
+  --boilerplate-c-groove: #eeede0;
+}
+
+.theme-dark {
+  --boilerplate-c-dark: #c9c7b8;
+  --boilerplate-c-faint: #191813;
+  --boilerplate-c-beige: #444444;
+  --boilerplate-c-tan: #b5b3a4;
+  --boilerplate-c-white: #000000;
+  --boilerplate-c-black: #ffffff;
+  --boilerplate-c-groove: #11121f;
+}
+
+/* Global styles */
+.window-app {
+  font-family: "Roboto", sans-serif;
+}
+
+.rollable:hover, .rollable:focus {
+  color: var(--boilerplate-c-black);
+  text-shadow: 0 0 10px red;
+  cursor: pointer;
+}
+
+.grid,
+.grid-2col {
+  display: grid;
+  grid-column: span 2/span 2;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.grid-3col {
+  grid-column: span 3/span 3;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-4col {
+  grid-column: span 4/span 4;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-5col {
+  grid-column: span 5/span 5;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-6col {
+  grid-column: span 6/span 6;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid-7col {
+  grid-column: span 7/span 7;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-8col {
+  grid-column: span 8/span 8;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.grid-9col {
+  grid-column: span 9/span 9;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.grid-10col {
+  grid-column: span 10/span 10;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+.grid-11col {
+  grid-column: span 11/span 11;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+}
+
+.grid-12col {
+  grid-column: span 12/span 12;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid-start-2 {
+  grid-column-start: 2;
+}
+
+.grid-start-3 {
+  grid-column-start: 3;
+}
+
+.grid-start-4 {
+  grid-column-start: 4;
+}
+
+.grid-start-5 {
+  grid-column-start: 5;
+}
+
+.grid-start-6 {
+  grid-column-start: 6;
+}
+
+.grid-start-7 {
+  grid-column-start: 7;
+}
+
+.grid-start-8 {
+  grid-column-start: 8;
+}
+
+.grid-start-9 {
+  grid-column-start: 9;
+}
+
+.grid-start-10 {
+  grid-column-start: 10;
+}
+
+.grid-start-11 {
+  grid-column-start: 11;
+}
+
+.grid-start-12 {
+  grid-column-start: 12;
+}
+
+.grid-span-2 {
+  grid-column-end: span 2;
+}
+
+.grid-span-3 {
+  grid-column-end: span 3;
+}
+
+.grid-span-4 {
+  grid-column-end: span 4;
+}
+
+.grid-span-5 {
+  grid-column-end: span 5;
+}
+
+.grid-span-6 {
+  grid-column-end: span 6;
+}
+
+.grid-span-7 {
+  grid-column-end: span 7;
+}
+
+.grid-span-8 {
+  grid-column-end: span 8;
+}
+
+.grid-span-9 {
+  grid-column-end: span 9;
+}
+
+.grid-span-10 {
+  grid-column-end: span 10;
+}
+
+.grid-span-11 {
+  grid-column-end: span 11;
+}
+
+.grid-span-12 {
+  grid-column-end: span 12;
+}
+
+.flex-group-center,
+.flex-group-left,
+.flex-group-right {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flex-group-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.flex-group-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.flexshrink {
+  flex: 0;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flexlarge {
+  flex: 2;
+}
+
+.align-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.align-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.align-center {
+  justify-content: center;
+  text-align: center;
+}
+
+/* Styles limited to boilerplate sheets */
+.boilerplate .item-form {
+  font-family: "Roboto", sans-serif;
+}
+.boilerplate .sheet-header {
+  flex: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.boilerplate .sheet-header .profile-img {
+  flex: 0 0 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+.boilerplate .sheet-header .header-fields {
+  flex: 1;
+}
+.boilerplate .sheet-tabs {
+  flex: 0;
+}
+.boilerplate .sheet-body,
+.boilerplate .sheet-body .tab,
+.boilerplate .sheet-body .tab .editor {
+  height: 100%;
+}
+.boilerplate .tab.biography {
+  flex: 1;
+}
+.boilerplate .tab.biography .editor {
+  height: 100%;
+}
+.boilerplate .tox .tox-editor-container {
+  background: var(--boilerplate-c-white);
+}
+.boilerplate .tox .tox-edit-area {
+  padding: 0 8px;
+}
+.boilerplate .resource-label {
+  font-weight: bold;
+}
+.boilerplate .ability {
+  margin-bottom: 2px;
+}
+.boilerplate .ability-score,
+.boilerplate .ability-mod {
+  flex: 0 0 44px;
+}
+.boilerplate .items-header {
+  height: 28px;
+  margin: 2px 0;
+  padding: 0;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px groove var(--boilerplate-c-groove);
+  font-weight: bold;
+}
+.boilerplate .items-header > * {
+  font-size: 14px;
+  text-align: center;
+}
+.boilerplate .items-header .item-name {
+  font-weight: bold;
+  padding-left: 5px;
+  text-align: left;
+  display: flex;
+}
+.boilerplate .items-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  color: var(--boilerplate-c-tan);
+}
+.boilerplate .items-list .item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.boilerplate .items-list .item-name {
+  flex: 2;
+  margin: 0;
+  overflow: hidden;
+  font-size: 13px;
+  text-align: left;
+  align-items: center;
+  display: flex;
+}
+.boilerplate .items-list .item-name h3, .boilerplate .items-list .item-name h4 {
+  margin: 0;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.boilerplate .items-list .item-controls {
+  display: flex;
+  flex: 0 0 100px;
+  justify-content: flex-end;
+}
+.boilerplate .items-list .item-controls a {
+  font-size: 12px;
+  text-align: center;
+  margin: 0 6px;
+}
+.boilerplate .items-list .item {
+  align-items: center;
+  padding: 0 2px;
+  border-bottom: 1px solid var(--boilerplate-c-faint);
+}
+.boilerplate .items-list .item:last-child {
+  border-bottom: none;
+}
+.boilerplate .items-list .item .item-name {
+  color: var(--boilerplate-c-dark);
+}
+.boilerplate .items-list .item .item-name .item-image {
+  flex: 0 0 30px;
+  height: 30px;
+  background-size: 30px;
+  border: none;
+  margin-right: 5px;
+}
+.boilerplate .items-list .item-prop {
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+}
+.boilerplate .items-list .items-header {
+  height: 28px;
+  margin: 2px 0;
+  padding: 0;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px groove var(--boilerplate-c-groove);
+  font-weight: bold;
+}
+.boilerplate .items-list .items-header > * {
+  font-size: 12px;
+  text-align: center;
+}
+.boilerplate .items-list .items-header .item-name {
+  padding-left: 5px;
+  text-align: left;
+}
+.boilerplate .item-formula {
+  flex: 0 0 200px;
+  padding: 0 8px;
+}
+.boilerplate .effects-header {
+  height: 28px;
+  margin: 2px 0;
+  padding: 0;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px groove var(--boilerplate-c-groove);
+  font-weight: bold;
+}
+.boilerplate .effects-header > * {
+  font-size: 14px;
+  text-align: center;
+}
+.boilerplate .effects-header .effect-name {
+  font-weight: bold;
+  padding-left: 5px;
+  text-align: left;
+  display: flex;
+}
+.boilerplate .effects-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  color: var(--boilerplate-c-tan);
+}
+.boilerplate .effects-list .effect-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.boilerplate .effects-list .effect-name {
+  flex: 2;
+  margin: 0;
+  overflow: hidden;
+  font-size: 13px;
+  text-align: left;
+  align-items: center;
+  display: flex;
+}
+.boilerplate .effects-list .effect-name h3, .boilerplate .effects-list .effect-name h4 {
+  margin: 0;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.boilerplate .effects-list .effect-controls {
+  display: flex;
+  flex: 0 0 100px;
+  justify-content: flex-end;
+}
+.boilerplate .effects-list .effect-controls a {
+  font-size: 12px;
+  text-align: center;
+  margin: 0 6px;
+}
+.boilerplate .effects-list .effect {
+  align-items: center;
+  padding: 0 2px;
+  border-bottom: 1px solid var(--boilerplate-c-faint);
+}
+.boilerplate .effects-list .effect:last-child {
+  border-bottom: none;
+}
+.boilerplate .effects-list .effect .effect-name {
+  color: var(--boilerplate-c-dark);
+}
+.boilerplate .effects-list .effect .effect-name .effect-image {
+  flex: 0 0 30px;
+  height: 30px;
+  background-size: 30px;
+  border: none;
+  margin-right: 5px;
+}
+.boilerplate .effects-list .effect-prop {
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+}
+.boilerplate .effects-list .effects-header {
+  height: 28px;
+  margin: 2px 0;
+  padding: 0;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px groove var(--boilerplate-c-groove);
+  font-weight: bold;
+}
+.boilerplate .effects-list .effects-header > * {
+  font-size: 12px;
+  text-align: center;
+}
+.boilerplate .effects-list .effects-header .effect-name {
+  padding-left: 5px;
+  text-align: left;
+}
+.boilerplate .effect-formula {
+  flex: 0 0 200px;
+  padding: 0 8px;
+}
+.boilerplate .effects .item .effect-source,
+.boilerplate .effects .item .effect-duration,
+.boilerplate .effects .item .effect-controls {
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+}
+.boilerplate .effects .item .effect-controls {
+  border: none;
+}
+
+/* MY STUFF BEYOND HERE */
+/* MY STUFF BEYOND HERE */
+/* MY STUFF BEYOND HERE */
+/* MY STUFF BEYOND HERE */
+/* MY STUFF BEYOND HERE */
+/* MY STUFF BEYOND HERE */
+
+.betterProfile-img {
+  /*flex: 0 0 100px;*/
+  height: 80px;
+  margin-right: 10px;
+}
+
+.weaknessDescriptionBlue {
+  font-size: 16px;
+  font-style: italic;
+  color: #4d5466;
+}
+.weaknessDescriptionRed {
+  font-size: 16px;
+  font-style: italic;
+  color: #c28ed8;
+}
+
+.weaknessTitleBlue {
+  font-size: 20px;
+  font-style: bold;
+  text-align: center;
+  color: #4d5466;
+}
+.weaknessTitleRed {
+  font-size: 20px;
+  font-style: bold;
+  text-align: center;
+  color: #c28ed8;
+}
+
+.itemHeader {
+    /*flex: 0 auto;*/
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    /*flex-wrap: wrap;
+    justify-content: flex-start;*/
+    margin-bottom: 10px;
+    width: 500px;
+    height: 300px;
+    position: relative;
+}
+
+.pfpContainer {
+  width: 100px;
+  height: 150px;
+}
+
+.nameInputField {
+  width: 500px;
+  height: 28px;
+}
+.itemNameInputField {
+  width: 300px;
+  height: 28px;
+}
+.statInputFieldSmall {
+  width: 30px;
+  height: 20px;
+}
+.statInputField {
+  width: 50px;
+  height: 20px;
+}
+.statInputFieldLarge {
+  width: 60px;
+  height: 28px;
+}
+.selectField {
+  width: 120px;
+  height: 28px;
+}
+
+.headContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.statsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.statsResources {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  height: 40px;
+  padding-right: 2px;
+  padding-left: 2px;
+
+  align-items: center;
+
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-bottom-style: dashed;
+}
+
+.statsResourcesCentered {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  height: 40px;
+  padding-top: 6px;
+  padding-right: 2px;
+  padding-bottom: 6px;
+  padding-left: 2px;
+
+  align-items: center;
+
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-bottom-style: dashed;
+}
+
+.defaultDescSection {
+    overflow: scroll;
+}
+
+.featWeaknessDescSection {
+    overflow: scroll;
+}
+
+.statsResourcesSub {
+  /*padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;*/
+  display: inline-block;
+}
+
+/* WEARABLE STUFF */
+
+.wearableItemHeader {
+    /*flex: 0 auto;*/
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    /*flex-wrap: wrap;
+    justify-content: flex-start;*/
+    margin-bottom: 10px;
+    width: 500px;
+    height: 140px;
+    position: relative;
+}
+
+.statsResourcesWearable {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  height: 40px;
+  padding-right: 2px;
+  padding-left: 2px;
+
+  align-items: center;
+
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-bottom-style: dashed;
+}
+
+.wearableNameInputField {
+  width: 380px;
+  height: 28px;
+}
+
+.wearablePfpContainer {
+  width: 80px;
+  height: 80px;
+  display: inline-flex;
+}
+
+/* WEAPON STUFF */
+
+.weaponItemHeader {
+    /*flex: 0 auto;*/
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    /*flex-wrap: wrap;
+    justify-content: flex-start;*/
+    margin-bottom: 10px;
+    width: 500px;
+    height: 200px;
+    position: relative;
+    overflow: scroll;
+}
+
+.weaponPfpContainer {
+  width: 80px;
+  height: 80px;
+  display: inline-flex;
+}
+
+.weaponDetailDesc {
+  font-size: 16px;
+  font-style: italic;
+  color: #96a4c9;
+}
+
+/* NEW CHARACTER SHEET STUFF*/
+/* NEW CHARACTER SHEET STUFF*/
+/* NEW CHARACTER SHEET STUFF*/
+/* NEW CHARACTER SHEET STUFF*/
+/* NEW CHARACTER SHEET STUFF*/
+
+.personSheetHeader {
+    overflow: scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 750px;
+    height: 300px;
+    min-height: 235px;
+
+    position: relative;
+
+    gap: 2px;
+
+    align-content: start;
+}
+.personSheetVertSideSections {
+  display: inline-flex;
+  flex-direction: column;
+  /*width: 250px;*/
+  width: 37%;
+  height: 220px;
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-style: dashed;
+}
+.personSheetVertCenterSection {
+  display: inline-flex;
+  flex-direction: column;
+  /*width: 200px;*/
+  width: 22%;
+  height: 220px;
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-style: dashed;
+
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.personSheetHorizPart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  height: 40px;
+
+  align-items: center;
+
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-style: dashed;
+}
+.personSheetHorizPartLarge {
+  display: flex;
+  flex-direction: row;
+
+  height: 50px;
+  font-size: 22px;
+  font-weight: bold;
+
+  align-items: center;
+  justify-content: center;
+
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-style: dashed;
+}
+.personSheetHorizPartSmall {
+  display: flex;
+  flex-direction: row;
+
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+
+  align-items: center;
+  justify-content: space-evenly;
+
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-style: dashed;
+}
+.personSheetHorizPartHalf {
+  display: flex;
+  flex-direction: row;
+
+  height: 45px;
+  font-size: 16px;
+  font-weight: bold;
+
+  align-items: center;
+  justify-content: space-around;
+
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-style: dashed;
+}
+
+.personPfpContainer {
+  width: 100px;
+  height: 100px;
+  display: inline-flex;
+}
+.betterPersonProfile-img {
+  flex: 0 0 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.personDetailText{
+  display: flex;
+  flex-direction: row;
+  
+  height: 40px;
+
+  align-items: center;
+  justify-content: center;
+    
+  font-size: 12px;
+  font-style: italic;
+
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-style: dashed;
+}
+
+.personSheetNameContainer {
+  /*display: flex;*/
+  /*flex-direction: row;
+  justify-content: space-around;*/
+
+  height: 30px;
+
+  /*align-items: center;*/
+
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-style: dashed;
+}
+.personNameInputField {
+  width: 160px;
+  height: 28px;
+}
+
+/* NEW CHARACTER INVENTORY STUFF*/
+/* NEW CHARACTER INVENTORY STUFF*/
+/* NEW CHARACTER INVENTORY STUFF*/
+/* NEW CHARACTER INVENTORY STUFF*/
+/* NEW CHARACTER INVENTORY STUFF*/
+
+.inventory{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 750px;
+  height: 600px;
+
+  scrollbar-width: thin;
+  scrollbar-color: red orange;
+
+  position: relative;
+
+  gap: 2px;
+
+  align-content: start;
+  margin-top: 10px;
+}
+
+.inventoryHeader {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 750px;
+    height: 600px;
+
+    scrollbar-width: thin;
+    scrollbar-color: red orange;
+
+    position: relative;
+
+    gap: 2px;
+
+    align-content: start;
+    margin-top: 10px;
+}
+
+.inventorySection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 300px;
+
+    position: relative;
+
+    gap: 2px;
+
+    align-content: start;
+    margin-top: 10px;
+}
+
+.inventoryItemContainerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  height: 240px;
+
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-style: dashed;
+}
+
+.inventoryEquippedContainerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  height: 240px;
+
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-style: dashed;
+}
+
+.inventoryEquippedTitle {
+  display: inline-flex;
+  flex-direction: column;
+  /*width: 250px;*/
+  width: 100%;
+  height: 40px;
+
+  align-items: center;
+  justify-content: center;
+
+  font-style: italic;
+  font-size: 18;
+
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-style: dashed;
+}
+
+.inventoryEquippedContainer {
+  overflow-y: scroll;
+  display: inline-flex;
+  flex-direction: column;
+  /*width: 250px;*/
+  width: 100%;
+  height: 220px;
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-style: dashed;
+}
+
+.inventoryShortTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 6ch;
+  max-height: 4ch;
+  margin-right: 6ch;
+}
+.inventoryShortTitleOffsetless {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 10ch;
+  max-height: 4ch;
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-right-style: dashed;
+}
+.inventoryShortTitleOffsetlessWearableName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 14ch;
+  max-height: 4ch;
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-right-style: dashed;
+}
+.inventoryShortTitleOffsetlessImage {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 6ch;
+  max-height: 4ch;
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-right-style: dashed;
+}
+
+.inventoryTiny {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 4ch;
+  max-height: 6ch;
+}
+
+.inventoryOffset {
+  position: relative;
+  left: -1ch;
+}
+
+
+
+/* NEW CHARACTER SKILL STUFF*/
+/* NEW CHARACTER SKILL STUFF*/
+/* NEW CHARACTER SKILL STUFF*/
+/* NEW CHARACTER SKILL STUFF*/
+/* NEW CHARACTER SKILL STUFF*/
+
+.skills {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 750px;
+    height: 600px;
+
+    scrollbar-width: thin;
+    scrollbar-color: red orange;
+
+    position: relative;
+
+    gap: 2px;
+
+    align-content: start;
+    margin-top: 10px;
+}
+
+.skillsHeader {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 750px;
+    height: 600px;
+
+    scrollbar-width: thin;
+    scrollbar-color: red orange;
+
+    position: relative;
+
+    gap: 2px;
+
+    align-content: start;
+    margin-top: 10px;
+}
+.skillsSection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 300px;
+
+    position: relative;
+
+    gap: 2px;
+
+    align-content: start;
+    margin-top: 10px;
+}
+
+.skillsContainerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  height: 240px;
+
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-style: dashed;
+}
+.skillsTitle {
+  display: inline-flex;
+  flex-direction: column;
+  /*width: 250px;*/
+  width: 100%;
+  height: 40px;
+
+  align-items: center;
+  justify-content: center;
+
+  font-style: italic;
+  font-size: 18;
+
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-style: dashed;
+}
+.skillsContainer {
+  overflow-y: scroll;
+  display: inline-flex;
+  flex-direction: column;
+  /*width: 250px;*/
+  width: 100%;
+  height: 220px;
+  border-color:rgb(50, 50, 50);
+  border-width: 1px;
+  border-style: dashed;
+}

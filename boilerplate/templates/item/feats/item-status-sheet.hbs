@@ -1,0 +1,46 @@
+<header class='sheet-header'>
+  <div class='headContainer'>
+    <div class='pfpContainer'>
+      <img
+        class='profile-img'
+        src='{{item.img}}'
+        data-edit='img'
+        data-action='onEditImage'
+        title='{{item.name}}'
+        height='100'
+        width='100'
+      />
+    </div>
+    <div class='statsContainer'>
+      <input
+        name='name'
+        type='text'
+        value='{{item.name}}'
+        placeholder='Name'
+        class='itemNameInputField'
+      />
+      <div class='statsResources'>
+        {{#if isUserGM}}
+        <label>Turn-based: </label>
+        <div class='statsResourcesSub'>
+    			{{radioBoxes groupNameStatus choicesStatus checked=chosenStatus localize=true}}
+        </div>
+        {{/if}}
+        {{#if isTurnBasedTrue}}
+        <div class='statsResourcesSub'>
+          <label for='system.turnCount.value' class='resource-label'>
+          {{localize 'Turns: '}}
+          </label>
+          <input
+          type='number'
+          name='system.turnCount.value'
+          value='{{system.turnCount.value}}'
+          class='statInputField'
+          />
+        </div>
+        {{/if}}
+      </div>
+
+    </div>
+  </div>
+</header>
