@@ -392,7 +392,9 @@ import {
 	 * @protected
 	 * @override
 	 */
-	_onRender(context, options) {
+	async _onRender(context, options) {
+	  await super._onRender(context, options);
+
 	  this.#dragDrop.forEach((d) => d.bind(this.element));
 	  this.#disableOverrides();
 	  // You may want to add other special handling here
