@@ -159,9 +159,9 @@ import {
 		context.flags = this.actor.flags;
 		// Adding a pointer to CONFIG.BOILERPLATE
 		context.config = CONFIG.BOILERPLATE;
-		context.tabs = this._prepareTabs(options);
+		//context.tabs = this._prepareTabs(options);
 		// Necessary for formInput and formFields helpers
-		context.fields = this.document.schema.fields;
+		//context.fields = this.document.schema.fields;
 		//systemFields: this.document.system.schema.fields,
 
 		context.isStaminaBelowHalf = this.actor.system.resources.stamina.value <= (this.actor.system.resources.stamina.max / 2);
