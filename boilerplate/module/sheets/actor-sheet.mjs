@@ -159,6 +159,7 @@ import {
 		context.flags = this.actor.flags;
 		// Adding a pointer to CONFIG.BOILERPLATE
 		context.config = CONFIG.BOILERPLATE;
+		context.items = this._prepareItems(context);
 		//context.tabs = this._prepareTabs(options);
 		// Necessary for formInput and formFields helpers
 		//context.fields = this.document.schema.fields;
