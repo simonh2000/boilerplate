@@ -495,6 +495,10 @@
 /* MY STUFF BEYOND HERE */
 /* MY STUFF BEYOND HERE */
 
+.tab.active {
+  display: foo;
+}
+
 .betterProfile-img {
   /*flex: 0 0 100px;*/
   height: 80px;
@@ -856,25 +860,6 @@
 /* NEW CHARACTER INVENTORY STUFF*/
 /* NEW CHARACTER INVENTORY STUFF*/
 
-.inventory{
-  overflow-y: scroll;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  width: 750px;
-  height: 600px;
-
-  scrollbar-width: thin;
-  scrollbar-color: red orange;
-
-  position: relative;
-
-  gap: 2px;
-
-  align-content: start;
-  margin-top: 10px;
-}
 
 .inventoryHeader {
     overflow-y: scroll;
@@ -1016,25 +1001,6 @@
 /* NEW CHARACTER SKILL STUFF*/
 /* NEW CHARACTER SKILL STUFF*/
 /* NEW CHARACTER SKILL STUFF*/
-
-.skills {
-    overflow-y: scroll;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 750px;
-    height: 600px;
-
-    scrollbar-width: thin;
-    scrollbar-color: red orange;
-
-    position: relative;
-
-    gap: 2px;
-
-    align-content: start;
-    margin-top: 10px;
-}
 
 .skillsHeader {
     overflow-y: scroll;
