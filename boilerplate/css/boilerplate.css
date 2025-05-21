@@ -495,8 +495,8 @@
 /* MY STUFF BEYOND HERE */
 /* MY STUFF BEYOND HERE */
 
-.tab.active {
-  display: foo;
+.tab .active {
+  display: contents;
 }
 
 .betterProfile-img {
