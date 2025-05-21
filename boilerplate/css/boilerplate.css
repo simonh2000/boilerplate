@@ -498,6 +498,18 @@
 .tab .active {
   display: contents;
 }
+.inventory {
+    width: 750px;
+    height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.skills {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 750px;
+    height: 600px;
+}
 
 .betterProfile-img {
   /*flex: 0 0 100px;*/
